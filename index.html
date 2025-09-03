@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Solutions - Exclusive Software Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Glass Navigation -->
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Log In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">
+            <span class="cipher">CIPHER</span>
+            <span class="solutions">SOLUTIONS</span>
+        </h1>
+        <p class="hero-subtitle">
+            Bespoke software solutions for ultra-high-net-worth individuals, 
+            global enterprises, and family offices.
+        </p>
+        <button class="hero-cta" onclick="openModal()">
+            Initiate Contact
+        </button>
+    </section>
+
+    <div class="main-content">
+        <!-- Services Section -->
+        <section id="services" class="section fade-in">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">Services</h2>
+            </div>
+            <p class="section-description">
+                Comprehensive technical solutions built with precision and deployed with care.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>Software Systems</h3>
+                    <p>Custom, zero-knowledge applications, automations, dashboards, and secure APIs engineered from the ground up.</p>
+                </div>
+
+                <div class="service-box">
+                    <h3>Private Infrastructure</h3>
+                    <p>Deployment of fully encrypted communications, file storage, and collaboration systems—covering NAS, VPNs, sovereign cloud, and hardened device configurations.</p>
+                </div>
+
+                <div class="service-box">
+                    <h3>Digital Purge</h3>
+                    <p>Systematic identification, removal, and suppression of sensitive data across the open web, deep web, and dark web—ensuring your digital footprint is reduced to zero and stays that way.</p>
+                </div>
+
+                <div class="service-box">
+                    <h3>Data Transformation</h3>
+                    <p>Securely consolidating, organizing, and migrating data, media, and records into centralized, encrypted environments for both convenience and long-term protection.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- clientele Section -->
+        <section id="clientele" class="section fade-in">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Clientele</h2>
+            </div>
+            <p class="section-description">
+                Engineered solutions for discerning clients who demand excellence without exception.
+            </p>
+            
+            <div class="clientele-list">
+                <div class="clientele-item" onclick="toggleclientele(this)">
+                    <h3>Individual</h3>
+                    <p>Comprehensive systems to manage your digital life with intelligence and absolute discretion.</p>
+                    <div class="clientele-expand">Expand Details</div>
+                    <div class="clientele-details">
+                        <ul class="clientele-features">
+                            <li>Encrypted communication suites</li>
+                            <li>Intelligent scheduling & coordination</li>
+                            <li>Financial dashboard integration</li>
+                            <li>Travel & logistics automation</li>
+                            <li>Privacy-first architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clientele-item" onclick="toggleclientele(this)">
+                    <h3>Executive</h3>
+                    <p>Sophisticated tools for high-level professionals who demand precision and confidentiality.</p>
+                    <div class="clientele-expand">Expand Details</div>
+                    <div class="clientele-details">
+                        <ul class="clientele-features">
+                            <li>Client relationship management</li>
+                            <li>Secure document workflows</li>
+                            <li>Professional communication suites</li>
+                            <li>Automated compliance monitoring</li>
+                            <li>Knowledge management systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clientele-item" onclick="toggleclientele(this)">
+                    <h3>Family Office</h3>
+                    <p>Integrated systems that seamlessly manage complex family operations across multiple entities.</p>
+                    <div class="clientele-expand">Expand Details</div>
+                    <div class="clientele-details">
+                        <ul class="clientele-features">
+                            <li>Multi-entity management</li>
+                            <li>Secure document repositories</li>
+                            <li>Family communication platforms</li>
+                            <li>Estate planning tools</li>
+                            <li>Philanthropic management systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clientele-item" onclick="toggleclientele(this)">
+                    <h3>Enterprise</h3>
+                    <p>Strategic software that gives your organization an invisible competitive edge.</p>
+                    <div class="clientele-expand">Expand Details</div>
+                    <div class="clientele-details">
+                        <ul class="clientele-features">
+                            <li>Real-time analytics dashboards</li>
+                            <li>Automated workflow optimization</li>
+                            <li>Secure API architectures</li>
+                            <li>Data intelligence platforms</li>
+                            <li>Scalable cloud infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section fade-in">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">Method</h2>
+            </div>
+            <p class="section-description">
+                A proven approach refined through years of serving the most demanding clients.
+            </p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Discovery</h4>
+                        <p>Confidential consultation to understand your unique requirements, challenges, and objectives.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Architecture</h4>
+                        <p>Custom solution design with security, scalability, and elegance as core principles.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Development</h4>
+                        <p>Precision engineering with rigorous testing protocols and flawless performance.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Deployment</h4>
+                        <p>Seamless integration with comprehensive training and continuous evolution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="section fade-in">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">Security</h2>
+            </div>
+            <p class="section-description">
+                Swiss-grade infrastructure and military-level protocols ensure absolute confidentiality.
+            </p>
+            
+            <div class="security-stats">
+                <div class="stat">
+                    <span class="stat-number">99.99%</span>
+                    <span class="stat-label">Uptime SLA</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">256-bit</span>
+                    <span class="stat-label">Encryption</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Zero</span>
+                    <span class="stat-label">Breaches</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Monitoring</span>
+                </div>
+            </div>
+            
+            <div class="security-description">
+                Every aspect of our operation is designed around absolute security. From our legal structure 
+                to our technical architecture, privacy and protection are built into the foundation. 
+                Trust is earned through consistent action, not words.
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section fade-in">
+            <h2 class="contact-title">Initiate Contact</h2>
+            <p class="contact-subtitle">For qualified prospects seeking exceptional solutions</p>
+            <button class="contact-btn" onclick="openModal()">
+                Request Consultation
+            </button>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Consultation Request</h3>
+            <p>Non-disclosure agreements will be sent prior to any detailed consultations</p>
+            
+            <form id="consultationForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="organization">Organization/Company</label>
+                    <input type="text" id="organization" name="organization">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Area of Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service...</option>
+                        <option value="personal">Personal Digital Infrastructure</option>
+                        <option value="family">Family Office Technology</option>
+                        <option value="enterprise">Enterprise Solutions</option>
+                        <option value="executive">Executive Services</option>
+                        <option value="other">Other / Multiple Areas</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Project Description *</label>
+                    <textarea id="message" name="message" placeholder="Please describe your requirements..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

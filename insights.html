@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights — Cipher Solutions</title>
+    <meta name="description" content="Sanitized case briefs and technical notes on zero‑knowledge software, client‑held keys, data residency, and sovereign infrastructure.">
+    <meta property="og:title" content="Cipher Solutions — Insights">
+    <meta property="og:description" content="Case briefs (sanitized) and engineering memos on zero‑knowledge patterns, key ceremonies, private networking, and immutable backups.">
+    <link rel="canonical" href="/insights">
+    <link rel="stylesheet" href="insights.css">
+</head>
+<body>
+    <!-- Floating Glass Navigation -->
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Log In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 id="insights-hero-title" class="hero-title">Insights</h1>
+        <p id="insights-hero-blurb" class="hero-subtitle">
+            Sanitized case briefs and technical notes from private, zero‑knowledge systems. No logos. No clients. Patterns you can use.
+        </p>
+    </header>
+
+    <div class="main-content">
+        <!-- Filter Navigation -->
+        <nav id="insights-filters" class="filters-nav fade-in" aria-label="Filter insights">
+            <button type="button" id="filter-all" class="filter-btn active" data-filter="all" aria-pressed="true">
+                All
+            </button>
+            <button type="button" id="filter-briefs" class="filter-btn" data-filter="briefs" aria-pressed="false">
+                Case Briefs
+            </button>
+            <button type="button" id="filter-memos" class="filter-btn" data-filter="memos" aria-pressed="false">
+                Technical Memos
+            </button>
+        </nav>
+
+        <!-- Insights List -->
+        <main id="insights-list" class="insights-grid fade-in" aria-live="polite">
+            <!-- Case Brief 1 -->
+            <article id="brief-principal-data-vault-europe" class="insight-card" data-kind="brief">
+                <div class="insight-header">
+                    <span class="insight-type">Case Brief</span>
+                    <h2>Principal Data Vault in a Privacy‑Favorable Jurisdiction</h2>
+                    <p class="insight-deck">Consolidate highly sensitive records and communications under client‑held keys with jurisdictional control and immutable backups.</p>
+                </div>
+                
+                <div class="insight-meta">
+                    <span class="meta-item">UHNW Principal</span>
+                    <span class="meta-item">3–4 min read</span>
+                    <span class="meta-item">Updated 2025‑08‑29</span>
+                </div>
+
+                <button class="expand-btn" data-target="brief-principal-data-vault-europe-content">
+                    <span>Read Brief</span>
+                    <span class="expand-icon">+</span>
+                </button>
+
+                <div id="brief-principal-data-vault-europe-content" class="insight-content hidden">
+                    <div class="content-section">
+                        <h4>Objective</h4>
+                        <p>Build a private, searchable repository for documents, communications, and media with zero plaintext exposure to vendors.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Constraints</h4>
+                        <p>No public endpoints; keys must remain with client (HSM + YubiKey). Residency restricted to a single European privacy‑favorable jurisdiction. Rapid restore required.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Approach</h4>
+                        <p>CSFLE/Queryable Encryption for PII; private NAS (ZFS + snapshots) paired with MongoDB cluster; PrivateLink‑only admin; blind indexes for exact‑match and prefix queries; SIEM with redacted logs.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Security Posture</h4>
+                        <p>Client‑owned HSM; dual‑control key ceremony; mTLS; least‑privilege RBAC; immutable/WORM backups; quarterly restore tests.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Outcome</h4>
+                        <p>Single source of truth; RTO/RPO met (1h/15m); reduced vendor sprawl; cryptographic erasure capability for specific datasets.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Delivered</h4>
+                        <p>Architecture pack, key ceremony guide, runbooks (backup/restore, IR), monitoring dashboards, UAT records.</p>
+                    </div>
+
+                    <a href="/contact?topic=nda&ref=brief-principal-data-vault-europe" class="nda-link">
+                        Request full brief under NDA
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Brief 2 -->
+            <article id="brief-family-office-multi-entity-reporting" class="insight-card" data-kind="brief">
+                <div class="insight-header">
+                    <span class="insight-type">Case Brief</span>
+                    <h2>Family Office — Multi‑Entity Reporting & Permissions</h2>
+                    <p class="insight-deck">Unify reporting across entities with strict role‑based access, entity‑scoped schemas, and jurisdiction‑locked replicas.</p>
+                </div>
+                
+                <div class="insight-meta">
+                    <span class="meta-item">Family Office</span>
+                    <span class="meta-item">3–4 min read</span>
+                    <span class="meta-item">Updated 2025‑08‑29</span>
+                </div>
+
+                <button class="expand-btn" data-target="brief-family-office-multi-entity-reporting-content">
+                    <span>Read Brief</span>
+                    <span class="expand-icon">+</span>
+                </button>
+
+                <div id="brief-family-office-multi-entity-reporting-content" class="insight-content hidden">
+                    <div class="content-section">
+                        <h4>Objective</h4>
+                        <p>Consolidate financial/operational data across multiple entities with entity‑level permissions and auditability.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Constraints</h4>
+                        <p>Residency bound to two jurisdictions; segregation between entities; zero‑knowledge for sensitive fields.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Approach</h4>
+                        <p>Postgres for reporting views + MongoDB operational store; CSFLE + deterministic encryption for joins; scheduled report packs; PrivateLink between services.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Security Posture</h4>
+                        <p>Per‑entity RBAC; time‑bound break‑glass; session recording for admin; immutable backups in each jurisdiction.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Outcome</h4>
+                        <p>Faster monthly closes; clean audit trail; measurable SLOs; reduced spreadsheet risk.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Delivered</h4>
+                        <p>Data model by entity, ETL pipelines, access attestations, reporting templates, SLO dashboard.</p>
+                    </div>
+
+                    <a href="/contact?topic=nda&ref=brief-family-office-multi-entity-reporting" class="nda-link">
+                        Request full brief under NDA
+                    </a>
+                </div>
+            </article>
+
+            <!-- Case Brief 3 -->
+            <article id="brief-operating-company-internal-tools" class="insight-card" data-kind="brief">
+                <div class="insight-header">
+                    <span class="insight-type">Case Brief</span>
+                    <h2>Operating Company — Internal Tools Modernization</h2>
+                    <p class="insight-deck">Replace brittle spreadsheets with secure APIs, workflow automation, and monitored services.</p>
+                </div>
+                
+                <div class="insight-meta">
+                    <span class="meta-item">Operating Company</span>
+                    <span class="meta-item">3–4 min read</span>
+                    <span class="meta-item">Updated 2025‑08‑29</span>
+                </div>
+
+                <button class="expand-btn" data-target="brief-operating-company-internal-tools-content">
+                    <span>Read Brief</span>
+                    <span class="expand-icon">+</span>
+                </button>
+
+                <div id="brief-operating-company-internal-tools-content" class="insight-content hidden">
+                    <div class="content-section">
+                        <h4>Objective</h4>
+                        <p>Improve reliability and speed for internal approvals, inventory, and reporting.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Constraints</h4>
+                        <p>Mixed vendor ecosystem; no public endpoints; phased rollout without downtime.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Approach</h4>
+                        <p>Service layer with strict contracts; per‑service RBAC; CI/CD with canary deploys; telemetry baseline and SLOs; backup tests gated before production cutover.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Security Posture</h4>
+                        <p>FIDO2 for privileged access; mTLS; secrets in Vault/KMS; WAF + rate‑limiting where exposed internally.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Outcome</h4>
+                        <p>Cycle time reductions (30–50%); fewer incidents; clear on‑call and runbooks.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Delivered</h4>
+                        <p>API specs, runbooks, observability stack, incident templates, migration plan.</p>
+                    </div>
+
+                    <a href="/contact?topic=nda&ref=brief-operating-company-internal-tools" class="nda-link">
+                        Request full brief under NDA
+                    </a>
+                </div>
+            </article>
+
+            <!-- Technical Memo 1 -->
+            <article id="memo-zero-knowledge-search-mongodb" class="insight-card" data-kind="memo">
+                <div class="insight-header">
+                    <span class="insight-type">Technical Memo</span>
+                    <h2>Zero‑Knowledge Search in MongoDB: Deterministic + Blind Indexes</h2>
+                    <p class="insight-deck">How to query encrypted fields without exposing plaintext.</p>
+                </div>
+                
+                <div class="insight-meta">
+                    <span class="meta-item">Encryption/Search</span>
+                    <span class="meta-item">4–5 min read</span>
+                    <span class="meta-item">Updated 2025‑08‑29</span>
+                </div>
+
+                <button class="expand-btn" data-target="memo-zero-knowledge-search-mongodb-content">
+                    <span>Read Memo</span>
+                    <span class="expand-icon">+</span>
+                </button>
+
+                <div id="memo-zero-knowledge-search-mongodb-content" class="insight-content hidden">
+                    <div class="content-section">
+                        <h4>Overview</h4>
+                        <p>Technical implementation guide for querying encrypted fields in MongoDB while maintaining zero‑knowledge properties. Covers deterministic encryption, blind indexing strategies, and performance considerations.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>Implementation</h4>
+                        <p>Detailed walkthrough of CSFLE configuration, index design patterns, and query optimization techniques for encrypted data stores.</p>
+                    </div>
+
+                    <a href="/contact?topic=nda&ref=memo-zero-knowledge-search-mongodb" class="nda-link">
+                        Request full memo under NDA
+                    </a>
+                </div>
+            </article>
+
+            <!-- Placeholder for additional technical memos -->
+            <article id="memo-key-ceremonies" class="insight-card" data-kind="memo">
+                <div class="insight-header">
+                    <span class="insight-type">Technical Memo</span>
+                    <h2>Key Ceremonies for Client‑Held Infrastructure</h2>
+                    <p class="insight-deck">Procedures for generating, rotating, and securing cryptographic keys in HSM environments.</p>
+                </div>
+                
+                <div class="insight-meta">
+                    <span class="meta-item">Key Management</span>
+                    <span class="meta-item">5–6 min read</span>
+                    <span class="meta-item">Updated 2025‑08‑29</span>
+                </div>
+
+                <button class="expand-btn" data-target="memo-key-ceremonies-content">
+                    <span>Read Memo</span>
+                    <span class="expand-icon">+</span>
+                </button>
+
+                <div id="memo-key-ceremonies-content" class="insight-content hidden">
+                    <div class="content-section">
+                        <h4>Overview</h4>
+                        <p>Comprehensive procedures for key lifecycle management in high‑security environments, including dual‑control protocols and ceremony documentation.</p>
+                    </div>
+
+                    <a href="/contact?topic=nda&ref=memo-key-ceremonies" class="nda-link">
+                        Request full memo under NDA
+                    </a>
+                </div>
+            </article>
+        </main>
+
+        <!-- CTA Section -->
+        <section id="insights-cta" class="cta-section fade-in" aria-labelledby="insights-cta-title">
+            <h2 id="insights-cta-title">Request a full brief (under NDA)</h2>
+            <p>We share detailed materials under mutual NDA, including architecture diagrams, runbooks, and measured results.</p>
+            <a id="insights-cta-link" href="/contact?topic=nda" class="cta-btn">
+                Start a private conversation
+            </a>
+        </section>
+    </div>
+
+    <script src="insights.js"></script>
+</body>
+</html>
